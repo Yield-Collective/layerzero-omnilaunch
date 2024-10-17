@@ -1,20 +1,20 @@
 import React from 'react';
-import { Bitcoin, Coins, Sun, Triangle, Hexagon, Zap, Rocket } from 'lucide-react';
+import btcIcon from '../assets/btc.png';
+import ethIcon from '../assets/eth.png';
+import solIcon from '../assets/sol.png';
+import avaxIcon from '../assets/avax.png';
+import tonIcon from '../assets/ton.png';
+import zroIcon from '../assets/zro.png';
+import olaIcon from '../assets/ola.png';
 
-interface CryptoData {
-  symbol: string;
-  price: string;
-  icon: React.ReactNode;
-}
-
-const cryptoData: CryptoData[] = [
-  { symbol: 'BTC', price: '$68,000', icon: <Bitcoin size={20} /> },
-  { symbol: 'ETH', price: '$2,451', icon: <Coins size={20} /> },
-  { symbol: 'SOL', price: '$146', icon: <Sun size={20} /> },
-  { symbol: 'AVAX', price: '$28.55', icon: <Triangle size={20} /> },
-  { symbol: 'TON', price: '$5.48', icon: <Hexagon size={20} /> },
-  { symbol: 'ZRO', price: '$4.90', icon: <Zap size={20} /> },
-  { symbol: 'OLA', price: '$0.17', icon: <Rocket size={20} /> },
+const cryptoData = [
+  { symbol: 'BTC', price: '$68,000', icon: btcIcon },
+  { symbol: 'ETH', price: '$2,621', icon: ethIcon },
+  { symbol: 'SOL', price: '$161', icon: solIcon },
+  { symbol: 'AVAX', price: '$28.55', icon: avaxIcon },
+  { symbol: 'TON', price: '$5.48', icon: tonIcon },
+  { symbol: 'ZRO', price: '$4.41', icon: zroIcon },
+  { symbol: 'OLA', price: '$0.02', icon: olaIcon },
 ];
 
 const CryptoTicker: React.FC = () => {
@@ -23,7 +23,9 @@ const CryptoTicker: React.FC = () => {
       <div className="ticker-container">
         {[...cryptoData, ...cryptoData].map((data, index) => (
           <div key={index} className="ticker-item text-black dark:text-white">
-            <span className="mr-2">{data.icon}</span>
+            <span className="mr-2">
+              <img src={data.icon} alt={data.symbol} width={20} height={20} />
+            </span>
             <span className="font-semibold">{data.symbol}</span>
             <span className="ml-2">{data.price}</span>
           </div>
