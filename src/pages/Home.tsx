@@ -3,6 +3,7 @@ import OFTMigrationForm from '../components/OFTMigrationForm';
 import KnowledgeCenter from '../components/KnowledgeCenter';
 import FAQ from '../components/FAQ';
 import { Layers } from 'lucide-react';
+import zroImage from '../assets/zro.png';
 
 const Home: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
         <h1 className="text-4xl font-bold mb-4">Welcome to OmniLaunch</h1>
         <p className="text-xl text-gray-400 mb-2">Simplifying OFT deployments for teams and DAOs</p>
         <div className="flex justify-center items-center">
-          <span className="text-sm text-gray-500">Powered by</span>
+          <span className="text-sm text-gray-500">Powered by LayerZero <img src={zroImage} alt="ZRO" className="inline-block w-6 h-6 ml-1" /></span>
           <Layers size={24} className="ml-2 text-accent" />
         </div>
       </section>

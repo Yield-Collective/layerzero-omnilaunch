@@ -8,7 +8,7 @@ interface CryptoData {
 }
 
 const cryptoData: CryptoData[] = [
-  { symbol: 'BTC', price: '$63,000', icon: <Bitcoin size={20} /> },
+  { symbol: 'BTC', price: '$68,000', icon: <Bitcoin size={20} /> },
   { symbol: 'ETH', price: '$2,451', icon: <Coins size={20} /> },
   { symbol: 'SOL', price: '$146', icon: <Sun size={20} /> },
   { symbol: 'AVAX', price: '$28.55', icon: <Triangle size={20} /> },
